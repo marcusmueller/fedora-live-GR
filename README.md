@@ -23,9 +23,7 @@ I've not tested this in mock (though I should have), so for now, you'll need a m
 sudo dnf install livecd-tools spin-kickstarts 
 git clone https://github.com/marcusmueller/fedora-live-GR
 cd fedora-live-GR
-sudo livecd-creator --verbose \
-  --config=$(pwd)/fedora-live-gnuradio.ks \
-  --fslabel=GNU_Radio-Live
+make iso
 </pre>
 
 ## Burning an image to a stick
