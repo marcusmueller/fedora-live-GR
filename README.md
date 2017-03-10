@@ -30,9 +30,26 @@ sudo livecd-creator --verbose \
 
 ## Burning an image to a stick
 
+### Fedora, RedHat 7, derivatives
+
 <pre>
 sudo dnf install liveusb-creator
 mediawriter
 </pre>
 
 and select the .iso from the previous step
+
+### Windows, OS X
+
+Get the mediawriter from https://github.com/MartinBriza/MediaWriter/releases
+
+### Other systems
+
+Unetbootin should work, or, in fact, dd.
+
+## Usage
+
+Applications → Programming → GRC
+
+The rest should be covered under http://tutorials.gnuradio.org
+
