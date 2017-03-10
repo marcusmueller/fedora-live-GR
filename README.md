@@ -13,7 +13,7 @@ Highlights:
 ## Getting an image
 ### Downloading a readily made image
 
-to be announced
+Get the current release torrent from https://github.com/marcusmueller/fedora-live-GR/releases .
 
 ### Building an image yourself
 
