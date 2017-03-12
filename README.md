@@ -20,7 +20,7 @@ Get the current release torrent from https://github.com/marcusmueller/fedora-liv
 I've not tested this in mock (though I should have), so for now, you'll need a machine running Fedora 25.
 
 <pre>
-sudo dnf install livecd-tools spin-kickstarts 
+sudo dnf install mock
 git clone https://github.com/marcusmueller/fedora-live-GR
 cd fedora-live-GR
 make iso
@@ -50,4 +50,3 @@ Unetbootin should work, or, in fact, dd.
 Applications → Programming → GRC
 
 The rest should be covered under http://tutorials.gnuradio.org
-
