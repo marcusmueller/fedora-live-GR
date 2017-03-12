@@ -37,6 +37,8 @@ caja-actions
 
 # system tools
 lightdm-gtk-greeter-settings
+ipython
+zsh
 
 # audio video
 parole
@@ -57,6 +59,11 @@ scipy
 python2
 python-pip
 
+gqrx
+doxygen
+python2-sphinx
+cppunit-devel
+wireshark-gtk
 
 
 
@@ -76,6 +83,7 @@ python-pip
 -gnome-themes-standard
 -gnome-user-docs
 -evolution
+-claws-mail
 
 
 # Help and art can be big, too

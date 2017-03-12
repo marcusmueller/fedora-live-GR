@@ -17,7 +17,6 @@ Get the current release torrent from https://github.com/marcusmueller/fedora-liv
 
 ### Building an image yourself
 
-I've not tested this in mock (though I should have), so for now, you'll need a machine running Fedora 25.
 
 <pre>
 sudo dnf install mock
