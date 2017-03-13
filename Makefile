@@ -8,11 +8,11 @@ test:
 	echo ${BASENAME}
 iso: ${BASENAME}.iso
 
-nomock-${BASENAME}.iso: fedora-live-gnuradio.ks
-	sudo livecd-creator --verbose --config=$(pwd)/fedora-live-gnuradio.ks --fslabel=${BASENAME}
+${BASENAME}.iso: fedora-live-gnuradio.ks
+	sudo livecd-creator --verbose --config=fedora-live-gnuradio.ks --fslabel=${BASENAME}
 	ln -s ${BASENAME}.iso GNU_Radio-Live.iso
 
-${BASENAME}.iso: fedora-live-gnuradio.ks
+mock: fedora-live-gnuradio.ks
 	./mockme.sh fedora-live-gnuradio.ks ${DESC}
 
 torrent: ${BASENAME}.torrent
