@@ -6,7 +6,7 @@
 %include /usr/share/spin-kickstarts/fedora-live-base.ks
 %include /usr/share/spin-kickstarts/fedora-live-minimization.ks
 
-part / --size 6144
+part / --size 8000
 
 timezone Europe/Berlin
 
@@ -47,10 +47,13 @@ PackageKit-gstreamer-plugin
 
 # GNU Radio stuff
 gnuradio
+gnuradio-examples
+gnuradio-devel
+gnuradio-doc
+
 gr-osmosdr
 python2-matplotlib-qt4
 git
-gnuradio-devel
 swig
 cmake
 gcc-c++
