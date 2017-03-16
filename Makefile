@@ -10,7 +10,6 @@ iso: ${BASENAME}.iso
 
 ${BASENAME}.iso: fedora-live-gnuradio.ks
 	sudo livecd-creator --verbose --config=fedora-live-gnuradio.ks --fslabel=${BASENAME}
-	ln -s ${BASENAME}.iso GNU_Radio-Live.iso
 
 mock: fedora-live-gnuradio.ks
 	./mockme.sh fedora-live-gnuradio.ks ${DESC}

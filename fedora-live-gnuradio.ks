@@ -1,10 +1,11 @@
-# Desktop with customizations to fit in a CD (package removals, etc.)
-# Maintained by the Fedora Desktop SIG:
-# http://fedoraproject.org/wiki/SIGs/Desktop
-# mailto:desktop@lists.fedoraproject.org
+# Desktop with customizations
+# Contains GNU Radio and stuff.
+# For questions and stuff, marcus@hostalia.de, and discuss-gnuradio@gnu.org
 
 %include /usr/share/spin-kickstarts/fedora-live-base.ks
 %include /usr/share/spin-kickstarts/fedora-live-minimization.ks
+
+repo --name pybombscopr --baseurl https://copr-be.cloud.fedoraproject.org/results/marcusmueller/pybombs/fedora-25-x86_64/
 
 part / --size 8000
 
@@ -61,12 +62,15 @@ python2-devel
 scipy
 python2
 python-pip
+python2-future
 
 gqrx
 doxygen
 python2-sphinx
 cppunit-devel
 wireshark-gtk
+
+python-PyBOMBS
 
 
 
@@ -131,6 +135,16 @@ restorecon -R /home/liveuser/
 # Blacklist the rtl2823u kernel module (we don't want DVB, we want SDR)
 # TODO: Move that into a customization package!
 echo "blacklist dvb_usb_rtl28xxu\n" >> /etc/modprobe.d/blacklist.conf
+
+# Install Pybombs
+
+
+##DOESN'T WORK:
+# pip2 install pybombs
+
+su -c "pybombs prefix init /home/liveuser/prefix" liveuser
+#disable the forced build of GNU Radio
+su -c "echo ''> /home/liveuser/prefix/.pybombs/config.yml" liveuser
 
 EOF
 
