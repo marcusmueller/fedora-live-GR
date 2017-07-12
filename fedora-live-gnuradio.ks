@@ -5,7 +5,7 @@
 %include /usr/share/spin-kickstarts/fedora-live-base.ks
 %include /usr/share/spin-kickstarts/fedora-live-minimization.ks
 
-repo --name pybombscopr --baseurl https://copr-be.cloud.fedoraproject.org/results/marcusmueller/pybombs/fedora-25-x86_64/
+#repo --name pybombscopr --baseurl https://copr-be.cloud.fedoraproject.org/results/marcusmueller/pybombs/fedora-25-x86_64/
 
 part / --size 8000
 
@@ -15,6 +15,8 @@ timezone Europe/Berlin
 libcrypt-nss
 -libcrypt
 -PackageKit*                # we switched to yumex, so we don't need this
+-anaconda
+-anaconda-tools
 firefox
 @mate
 compiz
@@ -37,20 +39,23 @@ blueman
 caja-actions
 
 # system tools
-lightdm-gtk-greeter-settings
+#lightdm-gtk-greeter-settings
+lightdm
 ipython
 zsh
 
 # audio video
 parole
 audacity
-PackageKit-gstreamer-plugin
+#PackageKit-gstreamer-plugin
 
 # GNU Radio stuff
 gnuradio
 gnuradio-examples
 gnuradio-devel
 gnuradio-doc
+
+python2-spyder
 
 gr-osmosdr
 python2-matplotlib-qt4
@@ -68,9 +73,9 @@ gqrx
 doxygen
 python2-sphinx
 cppunit-devel
-wireshark-gtk
+#wireshark-gtk
 
-python-PyBOMBS
+#python-PyBOMBS
 
 
 
@@ -142,9 +147,9 @@ echo "blacklist dvb_usb_rtl28xxu\n" >> /etc/modprobe.d/blacklist.conf
 ##DOESN'T WORK:
 # pip2 install pybombs
 
-su -c "pybombs prefix init /home/liveuser/prefix" liveuser
+#su -c "pybombs prefix init /home/liveuser/prefix" liveuser
 #disable the forced build of GNU Radio
-su -c "echo ''> /home/liveuser/prefix/.pybombs/config.yml" liveuser
+#su -c "echo ''> /home/liveuser/prefix/.pybombs/config.yml" liveuser
 
 EOF
 
