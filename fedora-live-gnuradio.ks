@@ -6,6 +6,7 @@
 %include /usr/share/spin-kickstarts/fedora-live-minimization.ks
 
 #repo --name pybombscopr --baseurl https://copr-be.cloud.fedoraproject.org/results/marcusmueller/pybombs/fedora-25-x86_64/
+repo --name LiveMediaHamradio --baseurl https://copr-be.cloud.fedoraproject.org/results/marcusmueller/LiveMediaHamradio/fedora-26-x86_64/
 
 part / --size 8000
 
@@ -74,6 +75,9 @@ doxygen
 python2-sphinx
 cppunit-devel
 #wireshark-gtk
+gr-ax25
+gr-stdout
+bastibl-iqdata
 
 #python-PyBOMBS
 
