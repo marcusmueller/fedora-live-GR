@@ -104,7 +104,7 @@ pidgin
 -brasero
 -colord
 -fedora-icon-theme
--GConf2
+#-GConf2
 -gnome-icon-theme
 -gnome-icon-theme-symbolic
 -gnome-themes
