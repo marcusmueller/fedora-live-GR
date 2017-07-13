@@ -44,6 +44,9 @@ caja-actions
 lightdm
 ipython
 zsh
+htop
+perf
+
 
 # audio video
 parole
@@ -55,15 +58,22 @@ gnuradio
 gnuradio-examples
 gnuradio-devel
 gnuradio-doc
+uhd
+uhd-firmware
 
 python2-spyder
 
 gr-osmosdr
 python2-matplotlib-qt4
 git
+git-gui
+tig
+gitk
 swig
 cmake
 gcc-c++
+gdb
+
 python2-devel
 scipy
 python2
@@ -75,10 +85,12 @@ doxygen
 python2-sphinx
 cppunit-devel
 #wireshark-gtk
-gr-ax25
-gr-stdout
+#gr-ax25
+#gr-stdout
 bastibl-iqdata
-
+workshop-sources
+gr-rds
+pidgin
 #python-PyBOMBS
 
 
