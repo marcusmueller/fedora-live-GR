@@ -6,18 +6,14 @@
 %include /usr/share/spin-kickstarts/fedora-live-minimization.ks
 
 #repo --name pybombscopr --baseurl https://copr-be.cloud.fedoraproject.org/results/marcusmueller/pybombs/fedora-25-x86_64/
-repo --name LiveMediaHamradio --baseurl https://copr-be.cloud.fedoraproject.org/results/marcusmueller/LiveMediaHamradio/fedora-26-x86_64/
-
+repo --name _copr_marcusmueller-gnuradio --baseurl https://copr-be.cloud.fedoraproject.org/results/marcusmueller/gnuradio/fedora-28-x86_64/
 part / --size 8000
 
 timezone Europe/Berlin
 
 %packages
-libcrypt-nss
 -libcrypt
 -PackageKit*                # we switched to yumex, so we don't need this
--anaconda
--anaconda-tools
 firefox
 @mate
 compiz
@@ -63,7 +59,7 @@ uhd-firmware
 
 python2-spyder
 
-gr-osmosdr
+#gr-osmosdr
 python2-matplotlib-qt4
 git
 git-gui
@@ -80,16 +76,12 @@ python2
 python-pip
 python2-future
 
-gqrx
 doxygen
 python2-sphinx
 cppunit-devel
 #wireshark-gtk
 #gr-ax25
 #gr-stdout
-bastibl-iqdata
-workshop-sources
-gr-rds
 pidgin
 #python-PyBOMBS
 
@@ -157,15 +149,6 @@ restorecon -R /home/liveuser/
 # TODO: Move that into a customization package!
 echo "blacklist dvb_usb_rtl28xxu\n" >> /etc/modprobe.d/blacklist.conf
 
-# Install Pybombs
-
-
-##DOESN'T WORK:
-# pip2 install pybombs
-
-#su -c "pybombs prefix init /home/liveuser/prefix" liveuser
-#disable the forced build of GNU Radio
-#su -c "echo ''> /home/liveuser/prefix/.pybombs/config.yml" liveuser
 
 EOF
 
