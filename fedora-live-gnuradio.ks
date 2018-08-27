@@ -16,14 +16,6 @@ timezone Europe/Berlin
 -PackageKit*                # we switched to yumex, so we don't need this
 firefox
 @mate
-compiz
-compiz-plugins-main
-compiz-plugins-extra
-compiz-manager
-compizconfig-python
-compiz-plugins-experimental
-libcompizconfig
-compiz-plugins-main
 ccsm
 simple-ccsm
 emerald-themes
