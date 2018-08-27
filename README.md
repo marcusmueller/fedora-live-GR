@@ -2,13 +2,8 @@
 
 Highlights:
 
-* Fedora 25 x86_64, MATE desktop (less confusing than Gnome 3, imho)
-* GNU Radio 3.7.10.1 (as of writing, the version from F25)
-* Packages from F25:
-  * gr-osmosdr
-  * rtl-sdr
-  * hackrf
-  * uhd (time of writing: 3.10.1.0)
+* Fedora 28 x86_64, MATE desktop (less confusing than Gnome 3, imho)
+* GNU Radio 3.7.13.4 (as of writing, the version from my COPR)
 
 ## Getting an image
 ### Downloading a readily made image
