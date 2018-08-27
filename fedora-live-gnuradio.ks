@@ -16,8 +16,6 @@ timezone Europe/Berlin
 -PackageKit*                # we switched to yumex, so we don't need this
 firefox
 @mate
-ccsm
-simple-ccsm
 emerald-themes
 emerald
 fusion-icon
