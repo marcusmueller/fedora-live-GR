@@ -12,7 +12,7 @@ part / --size 8000
 timezone Europe/Berlin
 
 %packages
--libcrypt
+#-libcrypt
 -PackageKit*                # we switched to yumex, so we don't need this
 firefox
 @mate
